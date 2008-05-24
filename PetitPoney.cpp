@@ -2,7 +2,7 @@
 #include "PetitPoney.h"
 
 PetitPoney::PetitPoney(const std::string& name)
-  : _name(name), _estpris(false)
+  : Jouet(name)
 {
 }
 
@@ -11,7 +11,7 @@ PetitPoney::~PetitPoney()
 }
 
 PetitPoney::PetitPoney(const PetitPoney& p)
-  : _name(p._name), _estpris(p._name)
+  : Jouet(p._name), _estpris(p._estpris)
 {
 }
 
