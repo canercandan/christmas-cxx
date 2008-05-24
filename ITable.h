@@ -5,13 +5,14 @@
 ** Login   <candan_c@epitech.net>
 ** 
 ** Started on  Sat May 24 20:04:29 2008 caner candan
-** Last update Sat May 24 20:48:41 2008 caner candan
+** Last update Sat May 24 20:52:18 2008 caner candan
 */
 
 #ifndef __ITABLE_H__
 # define __ITABLE_H__
 
 # include <iostream>
+# include "TablePePeNoel.h"
 # include "Objet.h"
 
 using namespace std;
@@ -20,6 +21,8 @@ class	ITable
 {
  public:
   virtual ~ITable();
+
+  virtual TablePePeNoel&	operator=(const TablePePeNoel& t) = 0;
 
   virtual static ITable	*CreerTable(void) const = 0;
 
