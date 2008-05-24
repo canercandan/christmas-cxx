@@ -5,13 +5,15 @@
 ** Login   <candan_c@epitech.net>
 ** 
 ** Started on  Sat May 24 14:08:50 2008 caner candan
-** Last update Sat May 24 15:29:53 2008 caner candan
+** Last update Sat May 24 15:50:51 2008 caner candan
 */
 
 #ifndef __EMBALLAGE_H__
 # define __EMBALLAGE_H__
 
-class	Emballage
+# include "Objet.h"
+
+class	Emballage : public Objet
 {
  public:
   Emballage();

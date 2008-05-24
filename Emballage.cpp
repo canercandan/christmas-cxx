@@ -5,7 +5,7 @@
 // Login   <candan_c@epitech.net>
 // 
 // Started on  Sat May 24 14:09:36 2008 caner candan
-// Last update Sat May 24 15:35:30 2008 caner candan
+// Last update Sat May 24 15:52:46 2008 caner candan
 //
 
 #include <iostream>
@@ -22,7 +22,7 @@ Emballage::Emballage(bool isempty, bool isopen)
 {}
 
 Emballage::Emballage(Emballage& e)
-  : _isempty(e._isempty), _isopen(e._isopen)
+  : Objet(), _isempty(e._isempty), _isopen(e._isopen)
 {}
 
 Emballage::~Emballage()
