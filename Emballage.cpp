@@ -5,7 +5,7 @@
 // Login   <candan_c@epitech.net>
 // 
 // Started on  Sat May 24 14:09:36 2008 caner candan
-// Last update Sat May 24 15:52:46 2008 caner candan
+// Last update Sat May 24 16:19:33 2008 caner candan
 //
 
 #include <iostream>
@@ -14,7 +14,7 @@
 using namespace std;
 
 Emballage::Emballage()
-  : _isempty(true), _isopen(true)
+  : _isempty(true), _isopen(true), _objet(NULL)
 {}
 
 Emballage::Emballage(bool isempty, bool isopen)
@@ -44,12 +44,13 @@ void	Emballage::estPris()
     cout << "sifflet en travaillant" << endl;
 }
 
-void	Emballage::emballerEmballage()
+void	Emballage::emballerEmballage(Objet *o)
 {
   if (this->_isopen && this->_isempty)
     {
       this->_isempty = false;
       this->_isopen = false;
+      this->_objet = o;
       cout << "tuuuut tuuut tuut" << endl;
     }
 }

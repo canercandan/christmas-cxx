@@ -5,7 +5,7 @@
 ** Login   <candan_c@epitech.net>
 ** 
 ** Started on  Sat May 24 15:22:11 2008 caner candan
-** Last update Sat May 24 15:39:09 2008 caner candan
+** Last update Sat May 24 15:59:17 2008 caner candan
 */
 
 #ifndef __OBJET_H__
@@ -25,4 +25,4 @@ class	Objet
   static Objet*		MesTestUnitaires(Objet **o);
 };
 
-#endif
+#endif /* !__OBJET_H__ */

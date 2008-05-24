@@ -5,7 +5,7 @@
 ** Login   <candan_c@epitech.net>
 ** 
 ** Started on  Sat May 24 14:08:50 2008 caner candan
-** Last update Sat May 24 15:50:51 2008 caner candan
+** Last update Sat May 24 16:19:18 2008 caner candan
 */
 
 #ifndef __EMBALLAGE_H__
@@ -23,11 +23,13 @@ class	Emballage : public Objet
   Emballage&	operator=(Emballage& e);
 
   virtual void	estPris();
-  void	emballerEmballage();
+  void	emballerEmballage(Objet *o);
   void	ouvrirEmballage();
  protected:
   bool	_isempty;
   bool	_isopen;
+ private:
+  Objet	*_objet;
 };
 
 #endif /* !__EMBALLAGE_H__ */
