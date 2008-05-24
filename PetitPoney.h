@@ -1,0 +1,14 @@
+#ifndef __PETITPONEY_H__
+#define __PETITPONEY_H__
+
+class	PetitPoney : public Jouet
+{
+ public:
+  PetitPoney(const std::string& name);
+  ~PetitPoney();
+  PetitPoney(const PetitPoney& p);
+  PetitPoney&	operator=(const PetitPoney& p);
+  void		estPris();
+};
+
+#endif
