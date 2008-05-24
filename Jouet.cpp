@@ -1,7 +1,7 @@
 #include "Jouet.h"
 
 Jouet::Jouet()
-  : _estpris(false)
+  : _name(NULL), _estpris(false)
 {}
 
 Jouet::Jouet(const std::string& name)
