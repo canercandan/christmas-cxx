@@ -5,7 +5,7 @@
 // Login   <candan_c@epitech.net>
 // 
 // Started on  Sat May 24 15:22:15 2008 caner candan
-// Last update Sat May 24 18:47:33 2008 caner candan
+// Last update Sat May 24 18:50:13 2008 caner candan
 //
 
 #include <iostream>
@@ -38,20 +38,21 @@ Objet&		Objet::operator=(const Objet& o)
 
 Objet**		Objet::MesTestUnitaires()
 {
-  Objet**	tab;
-
   try
     {
+      Objet**	tab;
+
       tab = new Objet*[2];
       tab[0] = new PetitPoney("poney gay");
       tab[1] = new Nounours("bisounours");
+      return (tab);
     }
   catch (bad_alloc& e)
     {
       cout << "Bad Alloc in Objet::MesTestUnitaires(): "
 	   << e.what() << endl;
+      return (NULL);
     }
-  return (tab);
 }
 
 Objet*	Objet::MesTestUnitaires(Objet **o)
