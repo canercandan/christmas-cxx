@@ -15,7 +15,6 @@ class	Jouet : public Objet
   virtual void	estPris() = 0;
  protected:
   std::string	_name;
-  bool		_estpris;
 };
 
 #endif

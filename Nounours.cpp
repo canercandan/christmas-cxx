@@ -10,16 +10,13 @@ Nounours::~Nounours()
 {}
 
 Nounours::Nounours(const Nounours& n)
-  : Jouet(n._name), _estpris(n._estpris)
+  : Jouet(n._name)
 {}
 
 Nounours&	Nounours::operator=(const Nounours& n)
 {
   if (this != &n)
-    {
-      this->_name = n._name;
-      this->_estpris = n._estpris;
-    }
+    this->_name = n._name;
   return (*this);
 }
 
