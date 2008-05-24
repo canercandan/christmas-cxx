@@ -5,7 +5,7 @@
 ** Login   <candan_c@epitech.net>
 ** 
 ** Started on  Sat May 24 20:04:29 2008 caner candan
-** Last update Sat May 24 21:55:23 2008 caner candan
+** Last update Sat May 24 22:09:30 2008 caner candan
 */
 
 #ifndef __ITABLE_H__
@@ -27,7 +27,7 @@ class	ITable
   virtual void		Poser(Objet *o) = 0;
   virtual Objet		*Prendre(const string& name) = 0;
   virtual Objet		*Prendre(const int pos) = 0;
-  virtual string	*Regarder() const = 0;
+  virtual string	**Regarder() const = 0;
 };
 
 #endif /* !__ITABLE_H__ */
