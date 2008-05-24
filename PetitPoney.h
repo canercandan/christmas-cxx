@@ -1,6 +1,7 @@
 #ifndef __PETITPONEY_H__
 #define __PETITPONEY_H__
 
+#include <iostream>
 #include "Jouet.h"
 
 class	PetitPoney : public Jouet
@@ -14,4 +15,4 @@ class	PetitPoney : public Jouet
   virtual void	estPris();
 };
 
-#endif
+#endif /* !__PETITPONEY_H__ */

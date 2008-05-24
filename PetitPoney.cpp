@@ -3,17 +3,14 @@
 
 PetitPoney::PetitPoney(const std::string& name)
   : Jouet(name)
-{
-}
+{}
 
 PetitPoney::~PetitPoney()
-{
-}
+{}
 
 PetitPoney::PetitPoney(const PetitPoney& p)
   : Jouet(p._name)
-{
-}
+{}
 
 PetitPoney&	PetitPoney::operator=(const PetitPoney& p)
 {

@@ -5,7 +5,7 @@
 // Login   <candan_c@epitech.net>
 // 
 // Started on  Sat May 24 15:22:15 2008 caner candan
-// Last update Sat May 24 18:50:13 2008 caner candan
+// Last update Sat May 24 19:07:53 2008 caner candan
 //
 
 #include <iostream>
@@ -61,16 +61,16 @@ Objet*	Objet::MesTestUnitaires(Objet **o)
     {
       int	i;
 
-      for (i = 0; i < 3; i++)
-	if (o[i] == NULL)
-	  throw i;
+      for (i = 0; o[i]; i++);
+      if (i != 3)
+	throw i;
       static_cast<Carton*>(o[1])->emballerEmballage(o[0]);
       static_cast<PapierCadeau*>(o[2])->emballerEmballage(o[1]);
     }
   catch (int e)
     {
-      cout << "MesTestUnitaires impossible: position "
-	   << e << "is NULL" << endl;
+      cout << "MesTestUnitaires impossible: "
+	   << e << " != 3" << endl;
       return (NULL);
     }
   return (o[2]);
