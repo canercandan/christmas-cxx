@@ -5,7 +5,7 @@
 ** Login   <candan_c@epitech.net>
 ** 
 ** Started on  Sat May 24 15:22:11 2008 caner candan
-** Last update Sat May 24 21:35:45 2008 caner candan
+** Last update Sat May 24 21:38:34 2008 caner candan
 */
 
 #ifndef __OBJET_H__
@@ -26,7 +26,7 @@ class	Objet
 
   static Objet**	MesTestUnitaires();
   static Objet*		MesTestUnitaires(Objet **o);
-  const std::string&	getName() const;
+  fconst std::string&	getName() const;
  protected:
   std::string	_name;
 };
