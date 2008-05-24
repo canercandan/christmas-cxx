@@ -5,7 +5,7 @@
 // Login   <candan_c@epitech.net>
 // 
 // Started on  Sat May 24 15:22:15 2008 caner candan
-// Last update Sat May 24 15:22:16 2008 caner candan
+// Last update Sat May 24 16:00:19 2008 julian kirtz
 //
 
 #include "Objet.h"
@@ -37,4 +37,9 @@ Objet**		Objet::MesTestUnitaires()
   tab[0] = new PetitPoney("poney gay");
   tab[1] = new Nounours("bisounours");
   return (tab);
+}
+
+Objet*		Objet::MesTestUnitaires(Objet **o)
+{
+  
 }

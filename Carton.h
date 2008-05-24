@@ -5,7 +5,7 @@
 ** Login   <candan_c@epitech.net>
 ** 
 ** Started on  Sat May 24 14:18:15 2008 caner candan
-** Last update Sat May 24 15:31:52 2008 caner candan
+** Last update Sat May 24 15:40:20 2008 julian kirtz
 */
 
 #ifndef __CARTON_H__
@@ -20,8 +20,7 @@ class	Carton : public Emballage
   Carton(Carton& c);
   ~Carton();
   Carton&	operator=(Carton& e);
-
-  // fermer carton
+  void		fermerCarton();
 };
 
 #endif /* !__CARTON_H__ */

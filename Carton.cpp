@@ -5,7 +5,7 @@
 // Login   <candan_c@epitech.net>
 // 
 // Started on  Sat May 24 14:47:48 2008 caner candan
-// Last update Sat May 24 15:17:56 2008 caner candan
+// Last update Sat May 24 15:41:52 2008 julian kirtz
 //
 
 #include "Carton.h"
@@ -29,4 +29,9 @@ Carton&	Carton::operator=(Carton& c)
       this->_isopen = c._isopen;
     }
   return (*this);
+}
+
+void	Carton::fermerCarton()
+{
+  this->_isopen = false;
 }
