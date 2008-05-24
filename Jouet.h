@@ -1,3 +1,13 @@
+/*
+** Jouet.h for Jouet in /u/epitech_2010s/candan_c/cu/rendu/cpp/colle1_cpp
+** 
+** Made by caner candan
+** Login   <candan_c@epitech.net>
+** 
+** Started on  Sat May 24 15:21:31 2008 caner candan
+** Last update Sat May 24 15:21:32 2008 caner candan
+*/
+
 #ifndef __JOUET_H__
 #define __JOUET_H__
 

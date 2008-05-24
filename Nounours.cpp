@@ -1,3 +1,13 @@
+//
+// Nounours.cpp for Nounours in /u/epitech_2010s/candan_c/cu/rendu/cpp/colle1_cpp
+// 
+// Made by caner candan
+// Login   <candan_c@epitech.net>
+// 
+// Started on  Sat May 24 15:21:47 2008 caner candan
+// Last update Sat May 24 15:21:48 2008 caner candan
+//
+
 #include <iostream>
 #include "Nounours.h"
 #include "Jouet.h"
