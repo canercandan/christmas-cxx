@@ -13,7 +13,7 @@ class	Jouet : public Objet
   Jouet&	operator=(Jouet& j);
 
   virtual void	estPris() = 0;
- protected:
+
   std::string	_name;
 };
 

@@ -8,6 +8,7 @@ class	Objet
   ~Objet();
   Objet(const Objet& o);
   Objet&	operator=(const Objet& o);
+
   Objet**	MesTestUnitaires();
 };
 
