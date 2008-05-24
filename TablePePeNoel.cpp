@@ -53,7 +53,7 @@ Objet*	TablePePeNoel::Prendre(const string& name)
   int		i = 0;
   try
     {
-      while (i < this->_nbObj && this->_tab[i]->_name != name)
+      while (i < this->_nbObj && this->_tab[i]._name != name)
 	{
 	  tmp[i] = this->_tab[i];
 	  i++;
@@ -76,7 +76,7 @@ Objet*	TablePePeNoel::Prendre(const string& name)
 
 Objet*	TablePePeNoel::Prendre(const int pos)
 {
-  Objet*	tmp[this->_nbObj - 1];
+  Objet*	tmp[11];
   Objet*	obj;
   int		i = 0;
   try
@@ -91,7 +91,7 @@ Objet*	TablePePeNoel::Prendre(const int pos)
       obj = this->_tab[i++];
       while (i < this->_nbObj)
 	tmp[i - 1] = this->_tab[i];
-      tmp[i - 1] = 0;
+      tmp[i - 1] = NULL;
       this->_nbObj--;
       this->_tab = tmp;
       return (obj);
