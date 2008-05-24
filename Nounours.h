@@ -10,7 +10,7 @@ class	Nounours : public Jouet
   ~Nounours();
   Nounours(const Nounours& n);
   Nounours&	operator=(const Nounours& n);
-  void		estPris();
+  virtual void	estPris();
 };
 
 #endif

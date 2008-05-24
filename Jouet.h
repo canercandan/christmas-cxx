@@ -11,6 +11,8 @@ class	Jouet : public Objet
   ~Jouet();
   Jouet(const Jouet& j);
   Jouet&		operator=(const Jouet& j);
+
+  virtual void	estPris() = 0;
  protected:
   const std::string&	_name;
 };
