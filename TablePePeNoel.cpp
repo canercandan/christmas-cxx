@@ -48,7 +48,7 @@ void	TablePePeNoel::Poser(Objet *o)
 
 Objet*	TablePePeNoel::Prendre(const string& name)
 {
-  Objet*	tmp[this->_nbObj - 1];
+  Objet*	tmp[11];
   Objet*	obj;
   int		i = 0;
   try
@@ -65,7 +65,8 @@ Objet*	TablePePeNoel::Prendre(const string& name)
 	tmp[i - 1] = this->_tab[i];
       tmp[i - 1] = 0;
       this->_nbObj--;
-      this->_tab = tmp;
+      for (i = 0; i < this->_nbObj; i++)
+	this->_tab[i] = tmp[i];
       return (obj);
     }
   catch (bool)
@@ -93,7 +94,8 @@ Objet*	TablePePeNoel::Prendre(const int pos)
 	tmp[i - 1] = this->_tab[i];
       tmp[i - 1] = NULL;
       this->_nbObj--;
-      this->_tab = tmp;
+      for (i = 0; i < this->_nbObj; i++)
+	this->_tab[i] = tmp[i];
       return (obj);
     }
   catch (bool)
@@ -102,7 +104,7 @@ Objet*	TablePePeNoel::Prendre(const int pos)
     }
 }
 
-std::string*	Regarder() const
+std::string*	TablePePeNoel::Regarder() const
 {
   std::string*	tab = new std::string[this->_nbObj];
   int		i = 0;
