@@ -5,7 +5,7 @@
 ** Login   <candan_c@epitech.net>
 ** 
 ** Started on  Sat May 24 15:22:11 2008 caner candan
-** Last update Sat May 24 15:22:12 2008 caner candan
+** Last update Sat May 24 15:39:09 2008 caner candan
 */
 
 #ifndef __OBJET_H__
@@ -19,7 +19,10 @@ class	Objet
   Objet(const Objet& o);
   Objet&	operator=(const Objet& o);
 
-  Objet**	MesTestUnitaires();
+  virtual void	estPris() = 0;
+
+  static Objet**	MesTestUnitaires();
+  static Objet*		MesTestUnitaires(Objet **o);
 };
 
 #endif

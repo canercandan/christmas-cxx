@@ -5,7 +5,7 @@
 ** Login   <candan_c@epitech.net>
 ** 
 ** Started on  Sat May 24 14:08:50 2008 caner candan
-** Last update Sat May 24 15:20:27 2008 caner candan
+** Last update Sat May 24 15:29:53 2008 caner candan
 */
 
 #ifndef __EMBALLAGE_H__
@@ -20,7 +20,7 @@ class	Emballage
   virtual ~Emballage();
   Emballage&	operator=(Emballage& e);
 
-  void	estPris();
+  virtual void	estPris();
   void	emballerEmballage();
   void	ouvrirEmballage();
  protected:
