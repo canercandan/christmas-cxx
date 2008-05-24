@@ -1,11 +1,10 @@
 #include "Jouet.h"
 
 Jouet::Jouet()
-  : _name(NULL), _estpris(false)
 {}
 
 Jouet::Jouet(const std::string& name)
-  : _name(name), _estpris(false)
+  : _name(name)
 {}
 
 Jouet::~Jouet()
@@ -14,9 +13,6 @@ Jouet::~Jouet()
 Jouet&	Jouet::operator=(Jouet& j)
 {
   if (this != &j)
-    {
-      this->_name = j._name;
-      this->_estpris = j._estpris;
-    }
+    this->_name = j._name;
   return (*this);
 }
