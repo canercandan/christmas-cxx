@@ -15,7 +15,7 @@ TablePePeNoel::~TablePePeNoel()
 }
 
 TablePePeNoel::TablePePeNoel(const TablePePeNoel& t)
-  : _nbObj(t._nbObj)
+  : ITable(), _nbObj(t._nbObj)
 {
   for (int i = 0; i < 11; i++)
     _tab[i] = t._tab[i];
@@ -72,6 +72,7 @@ Objet*	TablePePeNoel::Prendre(const string& name)
   catch (bool)
     {
       cout << "TablePePeNoel::Prendre impossible: 'Objet' named name not found" << endl;
+      return (NULL);
     }
 }
 
@@ -101,6 +102,7 @@ Objet*	TablePePeNoel::Prendre(const int pos)
   catch (bool)
     {
       cout << "TablePePeNoel::Prendre impossible: 'Objet' named name not found" << endl;
+      return (NULL);
     }
 }
 

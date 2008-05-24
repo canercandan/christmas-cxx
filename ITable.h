@@ -5,7 +5,7 @@
 ** Login   <candan_c@epitech.net>
 ** 
 ** Started on  Sat May 24 20:04:29 2008 caner candan
-** Last update Sat May 24 21:03:44 2008 caner candan
+** Last update Sat May 24 21:44:43 2008 caner candan
 */
 
 #ifndef __ITABLE_H__
@@ -20,7 +20,7 @@ using namespace std;
 class	ITable
 {
  public:
-  virtual ~ITable();
+  virtual ~ITable(){}
 
   //virtual static ITable	*CreerTable(void) const = 0;
 
