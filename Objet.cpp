@@ -5,10 +5,13 @@
 // Login   <candan_c@epitech.net>
 // 
 // Started on  Sat May 24 15:22:15 2008 caner candan
-// Last update Sat May 24 16:00:19 2008 julian kirtz
+// Last update Sat May 24 16:34:31 2008 julian kirtz
 //
 
 #include "Objet.h"
+//#include "Emballage.h"
+#include "Carton.h"
+#include "PapierCadeau.h"
 #include "PetitPoney.h"
 #include "Nounours.h"
 
@@ -41,5 +44,7 @@ Objet**		Objet::MesTestUnitaires()
 
 Objet*		Objet::MesTestUnitaires(Objet **o)
 {
-  
+  static_cast<Carton*>(o[1])->emballerEmballage(o[0]);
+  static_cast<PapierCadeau*>(o[2])->emballerEmballage(o[1]);
+  return (o[2]);
 }
