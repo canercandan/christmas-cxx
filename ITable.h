@@ -5,7 +5,7 @@
 ** Login   <candan_c@epitech.net>
 ** 
 ** Started on  Sat May 24 20:04:29 2008 caner candan
-** Last update Sat May 24 21:44:43 2008 caner candan
+** Last update Sat May 24 21:55:23 2008 caner candan
 */
 
 #ifndef __ITABLE_H__
@@ -24,7 +24,7 @@ class	ITable
 
   //virtual static ITable	*CreerTable(void) const = 0;
 
-  virtual void		Poser(const Objet *o) = 0;
+  virtual void		Poser(Objet *o) = 0;
   virtual Objet		*Prendre(const string& name) = 0;
   virtual Objet		*Prendre(const int pos) = 0;
   virtual string	*Regarder() const = 0;

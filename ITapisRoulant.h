@@ -5,7 +5,7 @@
 ** Login   <candan_c@epitech.net>
 ** 
 ** Started on  Sat May 24 20:15:51 2008 caner candan
-** Last update Sat May 24 20:49:17 2008 caner candan
+** Last update Sat May 24 21:49:36 2008 caner candan
 */
 
 #ifndef __ITAPISROULANT_H__
@@ -19,7 +19,7 @@ using namespace std;
 class	ITapisRoulant
 {
  public:
-  virtual ~ITapisRoulant();
+  virtual ~ITapisRoulant(){}
 
   virtual static ITapisRoulant	*CreerTapisRoulant(void) const = 0;
 

@@ -4,6 +4,7 @@
 #include "PapierCadeau.h"
 #include "PetitPoney.h"
 #include "Nounours.h"
+#include "TablePePeNoel.h"
 
 using namespace std;
 
@@ -15,6 +16,7 @@ int	main(void)
   PetitPoney	p("coucou");
   PapierCadeau	pc;
   Objet		*objet[] = {&p, &c, NULL};
+  TablePePeNoel	toto;
 
   tab = Objet::MesTestUnitaires();
   c.fermerCarton();
