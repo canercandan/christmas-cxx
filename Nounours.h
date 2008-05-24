@@ -1,6 +1,8 @@
 #ifndef __NOUNOURS_H__
 #define __NOUNOURS_H__
 
+#include "Jouet.h"
+
 class	Nounours : public Jouet
 {
  public:

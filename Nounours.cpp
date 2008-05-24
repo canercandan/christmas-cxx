@@ -2,8 +2,8 @@
 #include "Nounours.h"
 
 Nounours::Nounours(const std::string& name)
+  : Jouet(name)
 {
-  this->_name = name;
 }
 
 Nounours::~Nounours()

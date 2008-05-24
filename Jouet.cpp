@@ -4,6 +4,11 @@ Jouet::Jouet()
 {
 }
 
+Jouet::Jouet(const std::string& name)
+  : _name(name)
+{
+}
+
 Jouet::~Jouet()
 {
 }

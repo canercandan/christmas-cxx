@@ -2,8 +2,8 @@
 #include "PetitPoney.h"
 
 PetitPoney::PetitPoney(const std::string& name)
+  : Jouet(name)
 {
-  this->_name = name;
 }
 
 PetitPoney::~PetitPoney()
