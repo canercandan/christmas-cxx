@@ -5,16 +5,19 @@
 ** Login   <candan_c@epitech.net>
 ** 
 ** Started on  Sat May 24 15:22:11 2008 caner candan
-** Last update Sat May 24 15:59:17 2008 caner candan
+** Last update Sat May 24 21:35:45 2008 caner candan
 */
 
 #ifndef __OBJET_H__
 #define __OBJET_H__
 
+# include <string>
+
 class	Objet
 {
  public:
   Objet();
+  Objet(const std::string& name);
   virtual ~Objet();
   Objet(const Objet& o);
   Objet&	operator=(const Objet& o);
@@ -23,6 +26,9 @@ class	Objet
 
   static Objet**	MesTestUnitaires();
   static Objet*		MesTestUnitaires(Objet **o);
+  const std::string&	getName() const;
+ protected:
+  std::string	_name;
 };
 
 #endif /* !__OBJET_H__ */

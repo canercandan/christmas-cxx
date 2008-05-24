@@ -5,7 +5,7 @@
 // Login   <candan_c@epitech.net>
 // 
 // Started on  Sat May 24 15:22:15 2008 caner candan
-// Last update Sat May 24 19:07:53 2008 caner candan
+// Last update Sat May 24 21:37:17 2008 caner candan
 //
 
 #include <iostream>
@@ -19,6 +19,10 @@
 using namespace std;
 
 Objet::Objet()
+{}
+
+Objet::Objet(const string& name)
+  : _name(name)
 {}
 
 Objet::~Objet()
@@ -74,4 +78,9 @@ Objet*	Objet::MesTestUnitaires(Objet **o)
       return (NULL);
     }
   return (o[2]);
+}
+
+const string&	Objet::getName() const
+{
+  return (this->_name);
 }

@@ -5,14 +5,13 @@
 ** Login   <candan_c@epitech.net>
 ** 
 ** Started on  Sat May 24 15:21:31 2008 caner candan
-** Last update Sat May 24 19:12:54 2008 caner candan
+** Last update Sat May 24 21:17:36 2008 caner candan
 */
 
 #ifndef __JOUET_H__
 #define __JOUET_H__
 
-#include <iostream>
-#include "Objet.h"
+# include "Objet.h"
 
 class	Jouet : public Objet
 {
@@ -21,8 +20,6 @@ class	Jouet : public Objet
   Jouet(const std::string& name);
   virtual ~Jouet();
   Jouet&	operator=(Jouet& j);
- protected:
-  std::string	_name;
 };
 
 #endif

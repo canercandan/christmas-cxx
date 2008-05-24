@@ -5,16 +5,17 @@
 // Login   <candan_c@epitech.net>
 // 
 // Started on  Sat May 24 15:21:24 2008 caner candan
-// Last update Sat May 24 15:21:25 2008 caner candan
+// Last update Sat May 24 21:28:39 2008 caner candan
 //
 
+#include <string>
 #include "Jouet.h"
 
 Jouet::Jouet()
 {}
 
 Jouet::Jouet(const std::string& name)
-  : _name(name)
+  : Objet(name)
 {}
 
 Jouet::~Jouet()
