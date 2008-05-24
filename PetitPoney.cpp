@@ -11,17 +11,14 @@ PetitPoney::~PetitPoney()
 }
 
 PetitPoney::PetitPoney(const PetitPoney& p)
-  : Jouet(p._name), _estpris(p._estpris)
+  : Jouet(p._name)
 {
 }
 
 PetitPoney&	PetitPoney::operator=(const PetitPoney& p)
 {
   if (this != &p)
-    {
-      this->_name = p._name;
-      this->_estpris = p._estpris;
-    }
+    this->_name = p._name;
   return (*this);
 }
 
