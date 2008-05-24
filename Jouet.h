@@ -5,7 +5,7 @@
 ** Login   <candan_c@epitech.net>
 ** 
 ** Started on  Sat May 24 15:21:31 2008 caner candan
-** Last update Sat May 24 15:29:45 2008 caner candan
+** Last update Sat May 24 18:13:15 2008 caner candan
 */
 
 #ifndef __JOUET_H__
@@ -21,7 +21,7 @@ class	Jouet : public Objet
   Jouet(const std::string& name);
   virtual ~Jouet();
   Jouet&	operator=(Jouet& j);
- protected:
+  // protected:
   std::string	_name;
 };
 
