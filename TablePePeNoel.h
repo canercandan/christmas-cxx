@@ -13,7 +13,7 @@ class	TablePePeNoel : public ITable
   TablePePeNoel&	operator=(const TablePePeNoel& t);
 
   //virtual static ITable	*CreerTable(void) const;
-  virtual void		Poser(const Objet *o);
+  virtual void		Poser(Objet *o);
   virtual Objet*	Prendre(const std::string& name);
   virtual Objet*	Prendre(const int pos);
   virtual std::string*	Regarder() const;

@@ -31,7 +31,7 @@ TablePePeNoel&	TablePePeNoel::operator=(const TablePePeNoel& t)
   return (*this);
 }
 
-void	TablePePeNoel::Poser(const Objet *o)
+void	TablePePeNoel::Poser(Objet *o)
 {
   try
     {
@@ -53,7 +53,7 @@ Objet*	TablePePeNoel::Prendre(const string& name)
   int		i = 0;
   try
     {
-      while (i < this->_nbObj && this->_tab[i]._name != name)
+      while (i < this->_nbObj && this->_tab[i]->_name != name)
 	{
 	  tmp[i] = this->_tab[i];
 	  i++;
