@@ -110,7 +110,7 @@ std::string*	TablePePeNoel::Regarder() const
   int		i = 0;
   while (this->_tab[i])
     {
-      tab[i] = this->_tab[i].name;
+      tab[i] = this->_tab[i]->getName();
       i++;
     }
   return (tab);
