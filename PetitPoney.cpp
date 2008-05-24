@@ -2,7 +2,7 @@
 #include "PetitPoney.h"
 
 PetitPoney::PetitPoney(const std::string& name)
-  : Jouet(name)
+  : _name(name)
 {
 }
 

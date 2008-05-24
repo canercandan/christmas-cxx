@@ -7,14 +7,12 @@
 class	Jouet : public Objet
 {
  public:
-  Jouet();
-  ~Jouet();
-  Jouet(const Jouet& j);
-  Jouet&		operator=(const Jouet& j);
+  virtual ~Jouet();
 
   virtual void	estPris() = 0;
  protected:
   const std::string&	_name;
+  bool			_estpris;
 };
 
 #endif

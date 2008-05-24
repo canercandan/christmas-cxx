@@ -10,6 +10,7 @@ class	PetitPoney : public Jouet
   ~PetitPoney();
   PetitPoney(const PetitPoney& p);
   PetitPoney&	operator=(const PetitPoney& p);
+
   virtual void	estPris();
 };
 
