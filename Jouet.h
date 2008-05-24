@@ -7,7 +7,10 @@
 class	Jouet : public Objet
 {
  public:
+  Jouet();
+  Jouet(const std:string& name);
   virtual ~Jouet();
+  Jouet&	operator=(Jouet& j);
 
   virtual void	estPris() = 0;
  protected:

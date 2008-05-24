@@ -1,19 +1,17 @@
 #include <iostream>
 #include "Nounours.h"
+#include "Jouet.h"
 
 Nounours::Nounours(const std::string& name)
-  : _name(name), _estpris(false)
-{
-}
+  : Jouet(name)
+{}
 
 Nounours::~Nounours()
-{
-}
+{}
 
 Nounours::Nounours(const Nounours& n)
-  : _name(n._name), _estpris(n._estpris)
-{
-}
+  : Jouet(n._name), _estpris(n._estpris)
+{}
 
 Nounours&	Nounours::operator=(const Nounours& n)
 {
