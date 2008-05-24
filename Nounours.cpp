@@ -3,7 +3,8 @@
 #include "Jouet.h"
 
 Nounours::Nounours(const std::string& name)
-  : Jouet(name)
+  
+: Jouet(name)
 {}
 
 Nounours::~Nounours()
