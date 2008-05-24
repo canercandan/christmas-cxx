@@ -6,7 +6,7 @@ using namespace std;
 TablePePeNoel::TablePePeNoel()
 {
   for (int i = 0; i < 11; i++)
-    _tab = NULL;
+    _tab[i] = NULL;
   _nbObj = 0;
 }
 
@@ -15,7 +15,10 @@ TablePePeNoel::~TablePePeNoel()
 }
 
 TablePePeNoel::TablePePeNoel(const TablePePeNoel& t)
+  : _nbObj(t._nbObj)
 {
+  for (int i = 0; i < 11; i++)
+    _tab[i] = t._tab[i];
 }
 
 TablePePeNoel&	TablePePeNoel::operator=(const TablePePeNoel& t)

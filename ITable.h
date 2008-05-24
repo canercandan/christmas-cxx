@@ -5,7 +5,7 @@
 ** Login   <candan_c@epitech.net>
 ** 
 ** Started on  Sat May 24 20:04:29 2008 caner candan
-** Last update Sat May 24 20:52:18 2008 caner candan
+** Last update Sat May 24 21:03:44 2008 caner candan
 */
 
 #ifndef __ITABLE_H__
@@ -22,14 +22,12 @@ class	ITable
  public:
   virtual ~ITable();
 
-  virtual TablePePeNoel&	operator=(const TablePePeNoel& t) = 0;
-
-  virtual static ITable	*CreerTable(void) const = 0;
+  //virtual static ITable	*CreerTable(void) const = 0;
 
   virtual void		Poser(const Objet *o) = 0;
   virtual Objet		*Prendre(const string& name) = 0;
   virtual Objet		*Prendre(const int pos) = 0;
   virtual string	*Regarder() const = 0;
-}
+};
 
 #endif /* !__ITABLE_H__ */

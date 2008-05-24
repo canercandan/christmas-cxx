@@ -10,9 +10,9 @@ class	TablePePeNoel : public ITable
   TablePePeNoel();
   ~TablePePeNoel();
   TablePePeNoel(const TablePePeNoel& t);
-  virtual TablePePeNoel&	operator=(const TablePePeNoel& t);
+  TablePePeNoel&	operator=(const TablePePeNoel& t);
 
-  virtual static ITable	*CreerTable(void) const;
+  //virtual static ITable	*CreerTable(void) const;
   virtual void		Poser(const Objet *o);
   virtual Objet*	Prendre(const std::string& name);
   virtual Objet*	Prendre(const int pos);
@@ -21,3 +21,5 @@ class	TablePePeNoel : public ITable
   Objet*	_tab[11];
   int		_nbObj;
 };
+
+#endif /* !__TABLEPEPENOEL_H__ */
