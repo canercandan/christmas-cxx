@@ -5,7 +5,7 @@
 ** Login   <candan_c@epitech.net>
 ** 
 ** Started on  Sat May 24 22:30:32 2008 caner candan
-** Last update Sun May 25 12:02:10 2008 caner candan
+** Last update Sun May 25 13:51:02 2008 caner candan
 */
 
 #ifndef __TAPISROULANTPEPENOEL_H__
@@ -14,7 +14,6 @@
 # include <iostream>
 # include "TapisRoulantDef.h"
 # include "ITapisRoulant.h"
-# include "Emballage.h"
 
 using namespace std;
 

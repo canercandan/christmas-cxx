@@ -5,7 +5,7 @@
 ** Login   <candan_c@epitech.net>
 ** 
 ** Started on  Sun May 25 08:32:54 2008 caner candan
-** Last update Sun May 25 12:38:09 2008 caner candan
+** Last update Sun May 25 13:37:53 2008 caner candan
 */
 
 #ifndef __ELFDEPEPENOEL_H__
@@ -15,6 +15,7 @@
 # include "IElf.h"
 # include "TablePePeNoel.h"
 # include "TapisRoulantPePeNoel.h"
+# include "Objet.h"
 
 using namespace std;
 
@@ -32,7 +33,7 @@ class	ElfDePePeNoel : public IElf
   TablePePeNoel		*_table;
   TapisRoulantPePeNoel	*_tapis;
 
-  string	*_getStringObject(const string& name) const;
+  Objet	*_getObject(const string& name) const;
 };
 
 #endif /* !__ELFDEPEPENOEL_H__ */

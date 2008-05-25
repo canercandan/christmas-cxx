@@ -5,7 +5,7 @@
 // Login   <candan_c@epitech.net>
 // 
 // Started on  Sun May 25 09:44:12 2008 caner candan
-// Last update Sun May 25 13:10:11 2008 caner candan
+// Last update Sun May 25 13:49:50 2008 caner candan
 //
 
 #include <iostream>
@@ -15,15 +15,15 @@
 using namespace std;
 
 TapisRoulantDef::TapisRoulantDef()
-  : _emballage(NULL)
+  : _objet(NULL)
 {}
 
-TapisRoulantDef::TapisRoulantDef(Emballage *emballage)
-  : _emballage(emballage)
+TapisRoulantDef::TapisRoulantDef(Objet *objet)
+  : _objet(objet)
 {}
 
 TapisRoulantDef::TapisRoulantDef(const TapisRoulantDef& t)
-  : ITapisRoulant(), _emballage(t._emballage)
+  : ITapisRoulant(), _objet(t._objet)
 {}
 
 TapisRoulantDef::~TapisRoulantDef()
@@ -32,7 +32,7 @@ TapisRoulantDef::~TapisRoulantDef()
 TapisRoulantDef&	TapisRoulantDef::operator=(const TapisRoulantDef& t)
 {
   if (this != &t)
-    this->_emballage = t._emballage;
+    this->_objet = t._objet;
   return (*this);
 }
 
@@ -40,10 +40,10 @@ ostream&	operator<<(ostream& os, TapisRoulantDef& t)
 {
   try
     {
-      if (!t.getEmballage())
+      if (!t.getObjet())
 	throw true;
-      cout << t.getEmballage()->getName() << " has been send to PePeNoel";
-      t.setEmballage(NULL);
+      cout << t.getObjet()->getName() << " has been send to PePeNoel";
+      t.setObjet(NULL);
     }
   catch (bool)
     {
@@ -52,13 +52,13 @@ ostream&	operator<<(ostream& os, TapisRoulantDef& t)
   return (os);
 }
 
-void	operator>>(Emballage *e, TapisRoulantDef& t)
+void	operator>>(Object *o, TapisRoulantDef& t)
 {
   try
     {
-      if (t.getEmballage())
+      if (t.getObjet())
 	throw true;
-      t.setEmballage(e);
+      t.setObjet(e);
     }
   catch (bool)
     {
@@ -81,19 +81,19 @@ Emballage	*TapisRoulantDef::Regarder() const
   return (this->_emballage);
 }
 
-void	TapisRoulantDef::setEmballage(Emballage *e)
+void	TapisRoulantDef::setObjet(Object *o)
 {
-  this->_emballage = e;
+  this->_objet = o;
 }
 
-Emballage	*TapisRoulantDef::getEmballage(void)
+Objet	*TapisRoulantDef::getObjet(void)
 {
-  return (this->_emballage);
+  return (this->_objet);
 }
 
 bool	TapisRoulantDef::isEmpty(void) const
 {
-  if (!this->_emballage)
+  if (!this->_objet)
     return (true);
   return (false);
 }

@@ -44,7 +44,7 @@ void	Chaussette::udpSend(string& msg)
 {
   try
     {
-      int length = sendto(_socket, msg.c_str(), strlen(msg.c_str()), 0, (struct sockaddr*)&_multicastAddress, sizeof(_multicastAddress));
+      unsigned int length = sendto(_socket, msg.c_str(), strlen(msg.c_str()), 0, (struct sockaddr*)&_multicastAddress, sizeof(_multicastAddress));
       if (length < msg.size())
 	throw true;
     }

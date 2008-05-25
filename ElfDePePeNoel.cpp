@@ -5,7 +5,7 @@
 // Login   <candan_c@epitech.net>
 // 
 // Started on  Sun May 25 08:34:54 2008 caner candan
-// Last update Sun May 25 12:41:34 2008 caner candan
+// Last update Sun May 25 13:40:55 2008 caner candan
 //
 
 #include <string>
@@ -42,7 +42,7 @@ ElfDePePeNoel&	ElfDePePeNoel::operator=(ElfDePePeNoel& e)
   return (*this);
 }
 
-string		*ElfDePePeNoel::_getStringObject(const string& name) const
+Objet	*ElfDePePeNoel::_getObject(const string& name) const
 {
   string	**tab;
   int		i;
@@ -51,19 +51,37 @@ string		*ElfDePePeNoel::_getStringObject(const string& name) const
   tab = this->_table->Regarder();
   max = this->_table->getNbObj();
   for (i = 0; i < max; i++)
-    if (&name == tab[i])
-      return (tab[i]);
-    else if (name == "Jouet" && *tab[i] != "Carton" &&
-	     *tab[i] != "PapierCadeau")
-      return (tab[i]);
+    {
+      if (&name == tab[i])
+	return (this->_table->Prendre(*tab[i]));
+      else if (name == "Jouet" && *tab[i] != "Carton" &&
+	       *tab[i] != "PapierCadeau")
+	return (this->_table->Prendre(*tab[i]));
+    }
   return (NULL);
 }
 
+//   throw true;
+// }
+//   catch (bool)
+//     {
+//       cout << "pepe ya un schmolle dans la bignou" << endl;
+//       exit(0);
+//     }
+
+
 void	ElfDePePeNoel::emballerCadeau(void)
 {
-  Objet	*objet[] = {this->_table->Prendre(*_getStringObject("Jouet")),
-		    this->_table->Prendre(*_getStringObject("Carton")),
-		    this->_table->Prendre(*_getStringObject("PapierCadeau"))};
+  Objet	*PC = _getObject("PapierCadeau");
+
+  if (!PC)
+    {
+
+    }
+
+  Objet	*objet[] = {_getObject("Jouet"),
+		    _getObject("Carton"),
+		    PC};
 
   try
     {

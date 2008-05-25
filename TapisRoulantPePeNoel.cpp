@@ -5,7 +5,7 @@
 // Login   <candan_c@epitech.net>
 // 
 // Started on  Sat May 24 22:33:31 2008 caner candan
-// Last update Sun May 25 13:12:46 2008 caner candan
+// Last update Sun May 25 13:50:35 2008 caner candan
 //
 
 #include <iostream>
@@ -21,7 +21,7 @@ TapisRoulantPePeNoel::TapisRoulantPePeNoel()
 {}
 
 TapisRoulantPePeNoel::TapisRoulantPePeNoel(const TapisRoulantPePeNoel& t)
-  : TapisRoulantDef(t._emballage)
+  : TapisRoulantDef(t._objet)
 {}
 
 TapisRoulantPePeNoel::~TapisRoulantPePeNoel()
@@ -30,7 +30,7 @@ TapisRoulantPePeNoel::~TapisRoulantPePeNoel()
 TapisRoulantPePeNoel&	TapisRoulantPePeNoel::operator=(const TapisRoulantPePeNoel& t)
 {
   if (this != &t)
-    this->_emballage = t._emballage;
+    this->_objet = t._objet;
   return (*this);
 }
 
