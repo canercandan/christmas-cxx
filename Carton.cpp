@@ -5,7 +5,7 @@
 // Login   <candan_c@epitech.net>
 // 
 // Started on  Sat May 24 14:47:48 2008 caner candan
-// Last update Sat May 24 18:32:40 2008 caner candan
+// Last update Sun May 25 07:49:49 2008 caner candan
 //
 
 #include <iostream>
@@ -15,11 +15,15 @@
 using namespace std;
 
 Carton::Carton()
-{}
+{
+  _name = "Carton";
+}
 
 Carton::Carton(Carton& c)
   : Emballage(c._isempty, c._isopen, c._objet)
-{}
+{
+  _name = c._name;
+}
 
 Carton::~Carton()
 {}

@@ -5,18 +5,21 @@
 // Login   <candan_c@epitech.net>
 // 
 // Started on  Sat May 24 14:52:18 2008 caner candan
-// Last update Sat May 24 18:09:06 2008 caner candan
+// Last update Sun May 25 07:50:08 2008 caner candan
 //
 
 #include "PapierCadeau.h"
 
 PapierCadeau::PapierCadeau()
-  : Emballage()
-{}
+{
+  _name = "PapierCadeau";
+}
 
 PapierCadeau::PapierCadeau(PapierCadeau& p)
   : Emballage(p._isempty, p._isopen, p._objet)
-{}
+{
+  _name = p._name;
+}
 
 PapierCadeau::~PapierCadeau()
 {}

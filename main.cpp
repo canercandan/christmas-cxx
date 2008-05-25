@@ -5,6 +5,7 @@
 #include "PetitPoney.h"
 #include "Nounours.h"
 #include "TablePePeNoel.h"
+#include "TapisRoulantPePeNoel.h"
 
 using namespace std;
 
@@ -16,8 +17,15 @@ int	main(void)
   PetitPoney	p("coucou");
   PapierCadeau	pc;
   Objet		*objet[] = {&p, &c, NULL};
-  TablePePeNoel	toto;
+  TablePePeNoel	*tbl;
+  TapisRoulantPePeNoel	*tap;
 
+  tbl = static_cast<TablePePeNoel*>(TablePePeNoel::creerTable());
+  tap = static_cast<TapisRoulantPePeNoel*>
+    (TapisRoulantPePeNoel::creerTapisRoulant());
+  &c >> *tap;
+  cout << *tap << endl;
+  cout << *tap << endl;
   tab = Objet::MesTestUnitaires();
   c.fermerCarton();
   c.fermerCarton();

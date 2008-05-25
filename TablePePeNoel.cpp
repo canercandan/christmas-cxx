@@ -5,12 +5,15 @@
 // Login   <candan_c@epitech.net>
 // 
 // Started on  Sun May 25 07:03:00 2008 caner candan
-// Last update Sun May 25 07:27:27 2008 caner candan
+// Last update Sun May 25 07:53:47 2008 caner candan
 //
 
 #include <iostream>
 #include "TablePePeNoel.h"
 #include "ITable.h"
+#include "Carton.h"
+#include "Nounours.h"
+#include "PetitPoney.h"
 
 using namespace std;
 
@@ -19,11 +22,14 @@ TablePePeNoel::TablePePeNoel()
   for (int i = 0; i < 11; i++)
     _tab[i] = NULL;
   _nbObj = 0;
+  Poser(new Carton);
+  Poser(new Carton);
+  Poser(new Nounours("Bisounours"));
+  Poser(new PetitPoney("Pirate"));
 }
 
 TablePePeNoel::~TablePePeNoel()
-{
-}
+{}
 
 TablePePeNoel::TablePePeNoel(const TablePePeNoel& t)
   : ITable(), _nbObj(t._nbObj)
@@ -90,7 +96,8 @@ Objet*	TablePePeNoel::Prendre(const string& name)
     }
   catch (bool)
     {
-      cout << "TablePePeNoel::Prendre impossible: 'Objet' named name not found" << endl;
+      cout << "TablePePeNoel::Prendre impossible: 'Objet' "
+	   << "named name not found" << endl;
       return (NULL);
     }
 }
@@ -120,7 +127,8 @@ Objet*	TablePePeNoel::Prendre(const int pos)
     }
   catch (bool)
     {
-      cout << "TablePePeNoel::Prendre impossible: 'Objet' named name not found" << endl;
+      cout << "TablePePeNoel::Prendre impossible: 'Objet' named "
+	   << "name not found" << endl;
       return (NULL);
     }
 }
