@@ -17,10 +17,18 @@ int	main(void)
   PetitPoney	p("coucou");
   PapierCadeau	pc;
   Objet		*objet[] = {&p, &c, NULL};
-  TablePePeNoel	*tbl;
+  TablePePeNoel *tppn;
+  std::string**	tabstr;
+  int		i = 0;
   TapisRoulantPePeNoel	*tap;
 
-  tbl = static_cast<TablePePeNoel*>(TablePePeNoel::creerTable());
+  tppn = static_cast<TablePePeNoel*>(TablePePeNoel::creerTable());
+  tabstr = tppn->Regarder();
+  i = 0;
+  while (tabstr[i] != NULL)
+    cout << *(tabstr[i++]) << endl;
+  cout << "- fin test creer table -"<< endl;
+  /*
   tap = static_cast<TapisRoulantPePeNoel*>
     (TapisRoulantPePeNoel::creerTapisRoulant());
   &c >> *tap;
@@ -32,4 +40,19 @@ int	main(void)
   c.emballerEmballage(tab[0]);
   n = c.ouvrirEmballage();
   Objet::MesTestUnitaires(objet);
+  */
+  cout << "- debut test creer regarder -"<< endl;
+  tppn->Poser(&p);
+  tppn->Poser(&p);
+  tabstr = tppn->Regarder();
+  i = 0;
+  while (tabstr[i] != NULL)
+    cout << *(tabstr[i++]) << endl;
+  cout << "- fin test creer regarder -"<< endl;
+  tppn->Prendre(0);
+  tppn->Prendre(1);
+  tabstr = tppn->Regarder();
+  i = 0;
+  while (tabstr[i] != NULL)
+    cout << *(tabstr[i++]) << endl;
 }

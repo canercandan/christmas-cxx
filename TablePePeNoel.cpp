@@ -5,7 +5,7 @@
 // Login   <candan_c@epitech.net>
 // 
 // Started on  Sun May 25 07:03:00 2008 caner candan
-// Last update Sun May 25 07:53:47 2008 caner candan
+// Last update Sun May 25 08:48:39 2008 julian kirtz
 //
 
 #include <iostream>
@@ -87,11 +87,14 @@ Objet*	TablePePeNoel::Prendre(const string& name)
 	throw true;
       obj = this->_tab[i++];
       while (i < this->_nbObj)
-	tmp[i - 1] = this->_tab[i];
-      tmp[i - 1] = 0;
+	{
+	  tmp[i - 1] = this->_tab[i];
+	  i++;
+	}
       this->_nbObj--;
       for (i = 0; i < this->_nbObj; i++)
 	this->_tab[i] = tmp[i];
+      this->_tab[i] = NULL;
       return (obj);
     }
   catch (bool)
@@ -118,11 +121,15 @@ Objet*	TablePePeNoel::Prendre(const int pos)
 	throw true;
       obj = this->_tab[i++];
       while (i < this->_nbObj)
-	tmp[i - 1] = this->_tab[i];
+	{
+	  tmp[i - 1] = this->_tab[i];
+	  i++;
+	}
       tmp[i - 1] = NULL;
       this->_nbObj--;
       for (i = 0; i < this->_nbObj; i++)
 	this->_tab[i] = tmp[i];
+      this->_tab[i] = NULL;
       return (obj);
     }
   catch (bool)
@@ -135,13 +142,13 @@ Objet*	TablePePeNoel::Prendre(const int pos)
 
 std::string**	TablePePeNoel::Regarder() const
 {
-//   std::string**	tab = new std::string[this->_nbObj];
-//   int		i = 0;
-//   while (this->_tab[i])
-//     {
-//       tab[i] = this->_tab[i]->getName();
-//       i++;
-//     }
-//   return (tab);
-  return (NULL);
+  std::string**	tab = new std::string*[this->_nbObj + 1];
+  int		i = 0;
+  while (this->_tab[i])
+    {
+      tab[i] = const_cast<std::string*>(&(this->_tab[i]->getName()));
+      i++;
+    }
+  tab[i] = NULL;
+  return (tab);
 }
