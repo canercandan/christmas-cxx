@@ -5,7 +5,7 @@
 // Login   <candan_c@epitech.net>
 // 
 // Started on  Sat May 24 22:33:31 2008 caner candan
-// Last update Sun May 25 08:22:16 2008 caner candan
+// Last update Sun May 25 09:07:56 2008 caner candan
 //
 
 #include <iostream>
@@ -65,10 +65,24 @@ void		operator>>(Emballage *e, TapisRoulantPePeNoel& t)
 
 Emballage	*TapisRoulantPePeNoel::Regarder() const
 {
+  try
+    {
+      if (this->isEmpty())
+	throw true;
+    }
+  catch (bool)
+    {
+      cout << "Regarder impossible: TapisRoulantPePeNoel is empty" << endl;
+    }
   return (this->_emballage);
 }
 
 void		TapisRoulantPePeNoel::setEmballage(Emballage *e)
 {
   this->_emballage = e;
+}
+
+bool	TapisRoulantPePeNoel::isEmpty(void) const
+{
+  
 }
