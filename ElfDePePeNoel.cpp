@@ -5,7 +5,7 @@
 // Login   <candan_c@epitech.net>
 // 
 // Started on  Sun May 25 08:34:54 2008 caner candan
-// Last update Sun May 25 14:26:44 2008 caner candan
+// Last update Sun May 25 14:27:47 2008 caner candan
 //
 
 #include <string>
@@ -13,6 +13,7 @@
 #include "IElf.h"
 #include "TablePePeNoel.h"
 #include "TapisRoulantPePeNoel.h"
+#include "Objet.h"
 
 using namespace std;
 

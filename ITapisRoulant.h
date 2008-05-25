@@ -5,7 +5,7 @@
 ** Login   <candan_c@epitech.net>
 ** 
 ** Started on  Sat May 24 20:15:51 2008 caner candan
-** Last update Sun May 25 13:52:44 2008 caner candan
+** Last update Sun May 25 14:32:21 2008 caner candan
 */
 
 #ifndef __ITAPISROULANT_H__
@@ -19,7 +19,9 @@ class	ITapisRoulant
   virtual ~ITapisRoulant(){}
 
   virtual Objet		*Regarder(void) const = 0;
-  virtual void		setEmballage(Objet *e) = 0;
+  virtual void		setObjet(Objet *o) = 0;
+  virtual void		setObjet(void) = 0;
+  virtual Objet		*getObjet() = 0;
   virtual bool		isEmpty(void) const = 0;
 };
 

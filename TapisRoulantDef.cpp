@@ -5,7 +5,7 @@
 // Login   <candan_c@epitech.net>
 // 
 // Started on  Sun May 25 09:44:12 2008 caner candan
-// Last update Sun May 25 14:02:39 2008 julian kirtz
+// Last update Sun May 25 14:35:29 2008 caner candan
 //
 
 #include <iostream>
@@ -13,6 +13,11 @@
 #include <ctime>
 #include "TapisRoulantDef.h"
 #include "ITapisRoulant.h"
+#include "Objet.h"
+#include "Nounours.h"
+#include "PetitPoney.h"
+#include "Carton.h"
+#include "PapierCadeau.h"
 
 using namespace std;
 
@@ -54,13 +59,13 @@ ostream&	operator<<(ostream& os, TapisRoulantDef& t)
   return (os);
 }
 
-void	operator>>(Object *o, TapisRoulantDef& t)
+void	operator>>(Objet *o, TapisRoulantDef& t)
 {
   try
     {
       if (t.getObjet())
 	throw true;
-      t.setObjet(e);
+      t.setObjet(o);
     }
   catch (bool)
     {
@@ -68,7 +73,7 @@ void	operator>>(Object *o, TapisRoulantDef& t)
     }
 }
 
-Emballage	*TapisRoulantDef::Regarder() const
+Objet	*TapisRoulantDef::Regarder() const
 {
   try
     {
@@ -80,10 +85,10 @@ Emballage	*TapisRoulantDef::Regarder() const
       cout << "Regarder impossible: TapisRoulantPePeNoel is empty" << endl;
       return (NULL);
     }
-  return (this->_emballage);
+  return (this->_objet);
 }
 
-void	TapisRoulantDef::setObjet(Object *o)
+void	TapisRoulantDef::setObjet(Objet *o)
 {
   this->_objet = o;
 }
