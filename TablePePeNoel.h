@@ -12,11 +12,12 @@ class	TablePePeNoel : public ITable
   TablePePeNoel(const TablePePeNoel& t);
   TablePePeNoel&	operator=(const TablePePeNoel& t);
 
-  //virtual static ITable	*CreerTable(void) const;
+  static ITable		*creerTable(void);
+
   virtual void		Poser(Objet *o);
   virtual Objet*	Prendre(const std::string& name);
   virtual Objet*	Prendre(const int pos);
-  virtual std::string*	Regarder() const;
+  virtual std::string**	Regarder() const;
  private:
   Objet*	_tab[11];
   int		_nbObj;

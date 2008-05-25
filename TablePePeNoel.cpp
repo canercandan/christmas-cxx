@@ -1,5 +1,16 @@
+//
+// TablePePeNoel.cpp for TablePePeNoel in /home/candan_c/cu/rendu/cpp/colle1_cpp
+// 
+// Made by caner candan
+// Login   <candan_c@epitech.net>
+// 
+// Started on  Sun May 25 07:03:00 2008 caner candan
+// Last update Sun May 25 07:27:27 2008 caner candan
+//
+
 #include <iostream>
 #include "TablePePeNoel.h"
+#include "ITable.h"
 
 using namespace std;
 
@@ -29,6 +40,14 @@ TablePePeNoel&	TablePePeNoel::operator=(const TablePePeNoel& t)
 	this->_tab[i] = t._tab[i];
     }
   return (*this);
+}
+
+ITable		*TablePePeNoel::creerTable(void)
+{
+  ITable	*it;
+
+  it = new TablePePeNoel;
+  return (it);
 }
 
 void	TablePePeNoel::Poser(Objet *o)
@@ -106,14 +125,15 @@ Objet*	TablePePeNoel::Prendre(const int pos)
     }
 }
 
-std::string*	TablePePeNoel::Regarder() const
+std::string**	TablePePeNoel::Regarder() const
 {
-  std::string*	tab = new std::string[this->_nbObj];
-  int		i = 0;
-  while (this->_tab[i])
-    {
-      tab[i] = this->_tab[i]->getName();
-      i++;
-    }
-  return (tab);
+//   std::string**	tab = new std::string[this->_nbObj];
+//   int		i = 0;
+//   while (this->_tab[i])
+//     {
+//       tab[i] = this->_tab[i]->getName();
+//       i++;
+//     }
+//   return (tab);
+  return (NULL);
 }
