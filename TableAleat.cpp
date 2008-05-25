@@ -5,7 +5,7 @@
 // Login   <candan_c@epitech.net>
 // 
 // Started on  Sun May 25 10:27:05 2008 caner candan
-// Last update Sun May 25 15:02:22 2008 julian kirtz
+// Last update Sun May 25 15:04:04 2008 julian kirtz
 //
 
 #include <sstream>
@@ -24,7 +24,7 @@ TableAleat::TableAleat()
   int			i;
 
   srandom(time(NULL));
-  for (i = 0; i < _nbObj; i++)
+  for (i = 0; i < 9; i++)
     switch ((random() % 4))
       {
       case 0:
