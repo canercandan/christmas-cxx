@@ -5,7 +5,7 @@
 ## Login   <candan_c@epitech.net>
 ## 
 ## Started on  Sun May 25 10:11:27 2008 caner candan
-## Last update Sun May 25 13:25:38 2008 caner candan
+## Last update Sun May 25 15:27:20 2008 caner candan
 ##
 
 NAME		=	colle1
@@ -42,6 +42,7 @@ all		:	$(NAME)
 clean		:
 			$(RM) *~
 			$(RM) *.o
+			$(RM) *.core
 
 fclean		:	clean
 			$(RM) $(NAME)
