@@ -5,24 +5,24 @@
 // Login   <candan_c@epitech.net>
 // 
 // Started on  Sun May 25 08:34:54 2008 caner candan
-// Last update Sun May 25 14:27:47 2008 caner candan
+// Last update Sun May 25 14:52:37 2008 caner candan
 //
 
 #include <string>
 #include "ElfDePePeNoel.h"
 #include "IElf.h"
-#include "TablePePeNoel.h"
-#include "TapisRoulantPePeNoel.h"
+#include "TableAleat.h"
+#include "TapisRoulantAleat.h"
 #include "Objet.h"
 
 using namespace std;
 
 ElfDePePeNoel::ElfDePePeNoel()
-  : _table(new TablePePeNoel), _tapis(new TapisRoulantPePeNoel)
+  : _table(new TableAleat), _tapis(new TapisRoulantAleat)
 {}
 
-ElfDePePeNoel::ElfDePePeNoel(TablePePeNoel *table,
-			     TapisRoulantPePeNoel *tapis)
+ElfDePePeNoel::ElfDePePeNoel(TableAleat *table,
+			     TapisRoulantAleat *tapis)
   : _table(table), _tapis(tapis)
 {}
 
@@ -62,15 +62,7 @@ Objet	*ElfDePePeNoel::_getObject(const string& name) const
   return (NULL);
 }
 
-//   throw true;
-// }
-//   catch (bool)
-//     {
-//       exit(0);
-//     }
-
-
-void	ElfDePePeNoel::emballerCadeau(void)
+Objet	*ElfDePePeNoel::emballerCadeau(void)
 {
   Objet	*Jouet;
   Objet	*Carton;
@@ -105,5 +97,5 @@ void	ElfDePePeNoel::emballerCadeau(void)
     }
 
   Objet	*objet[] = {Jouet, Carton, PapierCadeau};
-  Objet::MesTestUnitaires(objet);
+  return (Objet::MesTestUnitaires(objet));
 }

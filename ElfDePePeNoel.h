@@ -5,7 +5,7 @@
 ** Login   <candan_c@epitech.net>
 ** 
 ** Started on  Sun May 25 08:32:54 2008 caner candan
-** Last update Sun May 25 13:37:53 2008 caner candan
+** Last update Sun May 25 14:49:45 2008 caner candan
 */
 
 #ifndef __ELFDEPEPENOEL_H__
@@ -13,8 +13,8 @@
 
 # include <string>
 # include "IElf.h"
-# include "TablePePeNoel.h"
-# include "TapisRoulantPePeNoel.h"
+# include "TableAleat.h"
+# include "TapisRoulantAleat.h"
 # include "Objet.h"
 
 using namespace std;
@@ -23,15 +23,15 @@ class	ElfDePePeNoel : public IElf
 {
  public:
   ElfDePePeNoel();
-  ElfDePePeNoel(TablePePeNoel *table, TapisRoulantPePeNoel *tapis);
+  ElfDePePeNoel(TableAleat *table, TapisRoulantAleat *tapis);
   ElfDePePeNoel(ElfDePePeNoel& e);
   ~ElfDePePeNoel();
   ElfDePePeNoel&	operator=(ElfDePePeNoel& e);
 
-  virtual void	emballerCadeau(void);
+  virtual Objet	*emballerCadeau(void);
  private:
-  TablePePeNoel		*_table;
-  TapisRoulantPePeNoel	*_tapis;
+  TableAleat		*_table;
+  TapisRoulantAleat	*_tapis;
 
   Objet	*_getObject(const string& name) const;
 };

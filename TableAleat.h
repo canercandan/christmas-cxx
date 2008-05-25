@@ -5,6 +5,7 @@
 
 class	TableAleat : public TableDef
 {
+ public:
   TableAleat();
   TableAleat(const TableAleat& t);
   ~TableAleat();
