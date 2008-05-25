@@ -5,7 +5,7 @@
 // Login   <candan_c@epitech.net>
 // 
 // Started on  Sat May 24 15:22:15 2008 caner candan
-// Last update Sat May 24 21:37:17 2008 caner candan
+// Last update Sun May 25 12:46:28 2008 caner candan
 //
 
 #include <iostream>
@@ -19,28 +19,31 @@
 using namespace std;
 
 Objet::Objet()
+  : _objet(NULL)
 {}
 
-Objet::Objet(const string& name)
-  : _name(name)
+Objet::Objet(const string& name, Objet *objet)
+  : _name(name), _objet(objet)
 {}
 
 Objet::~Objet()
 {}
 
 Objet::Objet(const Objet& o)
-{
-  (void) o;
-}
+  : _name(o._name), _objet(o._objet)
+{}
 
-Objet&		Objet::operator=(const Objet& o)
+Objet&	Objet::operator=(const Objet& o)
 {
   if (this != &o)
-    {}
+    {
+      this->_name = o._name;
+      this->_objet = o._objet;
+    }
   return (*this);
 }
 
-Objet**		Objet::MesTestUnitaires()
+Objet	**Objet::MesTestUnitaires()
 {
   try
     {
@@ -59,7 +62,7 @@ Objet**		Objet::MesTestUnitaires()
     }
 }
 
-Objet*	Objet::MesTestUnitaires(Objet **o)
+Objet	*Objet::MesTestUnitaires(Objet **o)
 {
   try
     {
@@ -83,4 +86,9 @@ Objet*	Objet::MesTestUnitaires(Objet **o)
 const string&	Objet::getName() const
 {
   return (this->_name);
+}
+
+Objet	*Objet::getObjet() const
+{
+  return (this->_objet);
 }

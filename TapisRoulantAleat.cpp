@@ -5,29 +5,34 @@
 // Login   <candan_c@epitech.net>
 // 
 // Started on  Sun May 25 09:54:27 2008 caner candan
-// Last update Sun May 25 10:36:45 2008 julian kirtz
+// Last update Sun May 25 13:01:36 2008 caner candan
 //
 
-#include <stdlib>
-#include <time>
+#include <cstdlib>
+#include <ctime>
 #include "TapisRoulantAleat.h"
 #include "PapierCadeau.h"
 #include "Carton.h"
 
 TapisRoulantAleat::TapisRoulantAleat()
 {
-  int	aleat;
   srandom(time(NULL));
-  if (aleat = random() % 2)
+  if ((random() % 2))
     setEmballage(new PapierCadeau);
   else
     setEmballage(new Carton);
 }
 
+TapisRoulantAleat::TapisRoulantAleat(const TapisRoulantAleat& t)
+  : TapisRoulantDef(t._emballage)
+{}
+
 TapisRoulantAleat::~TapisRoulantAleat()
 {}
 
-TapisRoulantAleat::TapisRoulantAleat(const TapisRoulantAleat& t)
-  : TapisRoulantDef ///a terminer
+TapisRoulantAleat&	TapisRoulantAleat::operator=(const TapisRoulantAleat& t)
 {
+  if (this != &t)
+    this->_emballage = t._emballage;
+  return (*this);
 }

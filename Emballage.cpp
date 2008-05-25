@@ -5,7 +5,7 @@
 // Login   <candan_c@epitech.net>
 // 
 // Started on  Sat May 24 14:09:36 2008 caner candan
-// Last update Sat May 24 18:33:20 2008 caner candan
+// Last update Sun May 25 12:50:41 2008 caner candan
 //
 
 #include <iostream>
@@ -15,16 +15,15 @@
 using namespace std;
 
 Emballage::Emballage()
-  : _isempty(true), _isopen(true), _objet(NULL)
+  : _isempty(true), _isopen(true)
 {}
 
-Emballage::Emballage(bool isempty, bool isopen, Objet *objet)
-  : _isempty(isempty), _isopen(isopen), _objet(objet)
+Emballage::Emballage(bool isempty, bool isopen)
+  : _isempty(isempty), _isopen(isopen)
 {}
 
 Emballage::Emballage(Emballage& e)
-  : Objet(), _isempty(e._isempty), _isopen(e._isopen),
-    _objet(e._objet)
+  : Objet(e._name, e._objet), _isempty(e._isempty), _isopen(e._isopen)
 {}
 
 Emballage::~Emballage()

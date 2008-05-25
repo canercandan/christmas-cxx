@@ -5,7 +5,7 @@
 ## Login   <candan_c@epitech.net>
 ## 
 ## Started on  Sun May 25 10:11:27 2008 caner candan
-## Last update Sun May 25 10:17:08 2008 caner candan
+## Last update Sun May 25 13:15:13 2008 caner candan
 ##
 
 NAME		=	colle1
@@ -14,13 +14,14 @@ SRCS		=	main.cpp			\
 			Carton.cpp			\
 			ElfDePePeNoel.cpp		\
 			Emballage.cpp			\
-			ITapisRoulant.cpp		\
 			Jouet.cpp			\
 			Nounours.cpp			\
 			Objet.cpp			\
 			PapierCadeau.cpp		\
 			PetitPoney.cpp			\
 			TablePePeNoel.cpp		\
+			TableAleat.cpp			\
+			TableDef.cpp			\
 			TapisRoulantAleat.cpp		\
 			TapisRoulantDef.cpp		\
 			TapisRoulantPePeNoel.cpp

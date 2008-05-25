@@ -6,7 +6,9 @@
 class	TableAleat : public TableDef
 {
   TableAleat();
+  TableAleat(const TableAleat& t);
   ~TableAleat();
+  TableAleat&	operator=(const TableAleat& t);
 };
 
 #endif

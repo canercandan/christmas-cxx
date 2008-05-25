@@ -5,7 +5,7 @@
 // Login   <candan_c@epitech.net>
 // 
 // Started on  Sat May 24 22:33:31 2008 caner candan
-// Last update Sun May 25 09:51:25 2008 caner candan
+// Last update Sun May 25 13:12:46 2008 caner candan
 //
 
 #include <iostream>
@@ -17,16 +17,24 @@
 using namespace std;
 
 TapisRoulantPePeNoel::TapisRoulantPePeNoel()
-  : _emballage(new PapierCadeau)
+  : TapisRoulantDef(new PapierCadeau)
+{}
+
+TapisRoulantPePeNoel::TapisRoulantPePeNoel(const TapisRoulantPePeNoel& t)
+  : TapisRoulantDef(t._emballage)
 {}
 
 TapisRoulantPePeNoel::~TapisRoulantPePeNoel()
 {}
 
-ITapisRoulant	*TapisRoulantDef::creerTapisRoulant(void)
+TapisRoulantPePeNoel&	TapisRoulantPePeNoel::operator=(const TapisRoulantPePeNoel& t)
 {
-  ITapisRoulant	*itr;
+  if (this != &t)
+    this->_emballage = t._emballage;
+  return (*this);
+}
 
-  itr = new TapisRoulantPePeNoel;
-  return (itr);
+ITapisRoulant	*TapisRoulantPePeNoel::creerTapisRoulant(void)
+{
+  return (new TapisRoulantPePeNoel);
 }

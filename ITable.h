@@ -5,14 +5,13 @@
 ** Login   <candan_c@epitech.net>
 ** 
 ** Started on  Sat May 24 20:04:29 2008 caner candan
-** Last update Sun May 25 09:11:15 2008 julian kirtz
+** Last update Sun May 25 13:17:56 2008 caner candan
 */
 
 #ifndef __ITABLE_H__
 # define __ITABLE_H__
 
 # include <iostream>
-# include "TablePePeNoel.h"
 # include "Objet.h"
 
 using namespace std;
@@ -27,6 +26,7 @@ class	ITable
   virtual Objet		*Prendre(const int pos) = 0;
   virtual string	**Regarder() const = 0;
   virtual bool		isEmpty(void) const = 0;
+  virtual int		getNbObj(void) const = 0;
 };
 
 #endif /* !__ITABLE_H__ */

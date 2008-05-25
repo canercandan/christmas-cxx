@@ -5,40 +5,64 @@
 // Login   <candan_c@epitech.net>
 // 
 // Started on  Sun May 25 09:44:12 2008 caner candan
-// Last update Sun May 25 09:51:20 2008 caner candan
+// Last update Sun May 25 13:10:11 2008 caner candan
 //
 
+#include <iostream>
 #include "TapisRoulantDef.h"
+#include "ITapisRoulant.h"
 
-ostream&	operator<<(ostream& os, TapisRoulantPePeNoel& t)
+using namespace std;
+
+TapisRoulantDef::TapisRoulantDef()
+  : _emballage(NULL)
+{}
+
+TapisRoulantDef::TapisRoulantDef(Emballage *emballage)
+  : _emballage(emballage)
+{}
+
+TapisRoulantDef::TapisRoulantDef(const TapisRoulantDef& t)
+  : ITapisRoulant(), _emballage(t._emballage)
+{}
+
+TapisRoulantDef::~TapisRoulantDef()
+{}
+
+TapisRoulantDef&	TapisRoulantDef::operator=(const TapisRoulantDef& t)
+{
+  if (this != &t)
+    this->_emballage = t._emballage;
+  return (*this);
+}
+
+ostream&	operator<<(ostream& os, TapisRoulantDef& t)
 {
   try
     {
-      if (!t._emballage)
+      if (!t.getEmballage())
 	throw true;
-      cout << t._emballage->getName() << " has been send to PePeNoel";
-      t._emballage = NULL;
+      cout << t.getEmballage()->getName() << " has been send to PePeNoel";
+      t.setEmballage(NULL);
     }
   catch (bool)
     {
-      cout << "operator<< impossible: object not found "
-	   << "in TapisRoulantPePeNoel";
+      cout << "operator<< impossible: object not found";
     }
   return (os);
 }
 
-void		operator>>(Emballage *e, TapisRoulantPePeNoel& t)
+void	operator>>(Emballage *e, TapisRoulantDef& t)
 {
   try
     {
-      if (t._emballage)
+      if (t.getEmballage())
 	throw true;
       t.setEmballage(e);
     }
   catch (bool)
     {
-      cout << "operator>> impossible: object found "
-	   << "in TapisRoulantPePeNoel" << endl;
+      cout << "operator>> impossible: object found" << endl;
     }
 }
 
@@ -52,6 +76,7 @@ Emballage	*TapisRoulantDef::Regarder() const
   catch (bool)
     {
       cout << "Regarder impossible: TapisRoulantPePeNoel is empty" << endl;
+      return (NULL);
     }
   return (this->_emballage);
 }
@@ -59,6 +84,11 @@ Emballage	*TapisRoulantDef::Regarder() const
 void	TapisRoulantDef::setEmballage(Emballage *e)
 {
   this->_emballage = e;
+}
+
+Emballage	*TapisRoulantDef::getEmballage(void)
+{
+  return (this->_emballage);
 }
 
 bool	TapisRoulantDef::isEmpty(void) const

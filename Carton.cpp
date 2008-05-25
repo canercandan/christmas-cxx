@@ -5,7 +5,7 @@
 // Login   <candan_c@epitech.net>
 // 
 // Started on  Sat May 24 14:47:48 2008 caner candan
-// Last update Sun May 25 07:49:49 2008 caner candan
+// Last update Sun May 25 12:52:34 2008 caner candan
 //
 
 #include <iostream>
@@ -17,12 +17,14 @@ using namespace std;
 Carton::Carton()
 {
   _name = "Carton";
+  _objet = NULL;
 }
 
 Carton::Carton(Carton& c)
-  : Emballage(c._isempty, c._isopen, c._objet)
+  : Emballage(c._isempty, c._isopen)
 {
   _name = c._name;
+  _objet = c._objet;
 }
 
 Carton::~Carton()
@@ -34,6 +36,7 @@ Carton&	Carton::operator=(Carton& c)
     {
       this->_isempty = c._isempty;
       this->_isopen = c._isopen;
+      this->_name = c._name;
       this->_objet = c._objet;
     }
   return (*this);
