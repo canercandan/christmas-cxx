@@ -14,10 +14,10 @@ typedef void* opt_type;
 class	Chaussette
 {
  public:
-  static const short MAX_LENGHT;
+  static const short MAX_LENGTH;
   Chaussette(const char* mystic, unsigned short port);
   ~Chaussette();
-  void		udpSend(std::string msg);
+  void		udpSend(std::string& msg);
   std::string	udpReceive(void);
  private:
   struct sockaddr_in	_remoteAddress;

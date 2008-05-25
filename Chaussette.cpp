@@ -2,15 +2,15 @@
 
 using namespace std;
 
-const short Chaussette::MAX_LENGHT = 1024;
+const short Chaussette::MAX_LENGTH = 1024;
 
 Chaussette::Chaussette(const char* mystic, unsigned short port)
 {
   try
     {
       cout << "Hue de pet multi-casque chaussette:" << endl
-	   << Mystique: << mystic << endl
-	   << Porte: << port << endl;
+	   << "Mystique: " << mystic << endl
+	   << "Porte: " << port << endl;
       int	success;
       int	mc_ttl = 1;
       _bound = false;
@@ -20,9 +20,9 @@ Chaussette::Chaussette(const char* mystic, unsigned short port)
 	throw true;
       memset(&_multicastAddress, 0, sizeof(_multicastAddress));
       _multicastAddress.sin_family = AF_INET;
-      _multicastAddress.sin_addr.s_addr = inet_addr(group);
+      _multicastAddress.sin_addr.s_addr = inet_addr(mystic);
       _multicastAddress.sin_port = htons(port);
-      _request.imr_multiaddr.s_addr = inet_addr(group);
+      _request.imr_multiaddr.s_addr = inet_addr(mystic);
       _request.imr_interface.s_addr = INADDR_ANY;
       if (success < 0 || _socket < 0)
 	throw true;
@@ -56,7 +56,7 @@ void	Chaussette::udpSend(string& msg)
 
 string	Chaussette::udpReceive()
 {
-  char		buffer[MAX_LENGHT + 1];
+  char		buffer[MAX_LENGTH + 1];
   int		length;
   string	msg;
   unsigned int	from_len;
@@ -64,12 +64,12 @@ string	Chaussette::udpReceive()
     {
       bind(_socket, (struct sockaddr *)&_multicastAddress, sizeof(_multicastAddress));
       setsockopt(_socket, IPPROTO_IP, IP_ADD_MEMBERSHIP, (opt_type)&_request, sizeof(_request));
-      _boud = true;
+      _bound = true;
     }
   memset(buffer, 0, sizeof(buffer));
   from_len = sizeof(_remoteAddress);
   memset(&_remoteAddress, 0, from_len);
   length = recvfrom(_socket, buffer, MAX_LENGTH, 0, (struct sockaddr*) &_remoteAddress, (socklen_t *) &from_len);
-  message = string(buffer);
-  return string(message.c_str());
+  msg = string(buffer);
+  return string(msg.c_str());
 }
