@@ -5,12 +5,13 @@
 ## Login   <candan_c@epitech.net>
 ## 
 ## Started on  Sun May 25 10:11:27 2008 caner candan
-## Last update Sun May 25 15:27:20 2008 caner candan
+## Last update Sun May 25 15:37:20 2008 caner candan
 ##
 
-NAME		=	colle1
+LT_NAME		=	LutinHouse
+WM_NAME		=	WarpMachine
 
-SRCS		=	main.cpp			\
+LT_SRCS		=	main.cpp			\
 			Carton.cpp			\
 			ElfDePePeNoel.cpp		\
 			Emballage.cpp			\
@@ -27,17 +28,26 @@ SRCS		=	main.cpp			\
 			TapisRoulantPePeNoel.cpp	\
 			Chaussette.cpp
 
-OBJS		=	$(SRCS:.cpp=.o)
+WM_SRCS		=	WarpMachine.cpp
+
+LT_OBJS		=	$(LT_SRCS:.cpp=.o)
+WM_OBJS		=	$(WM_SRCS:.cpp=.o)
 
 CFLAGS		=	-W -Wall -Werror
 
 CC		=	g++
 RM		=	rm -f
+MK		=	make
 
-$(NAME)		:	$(OBJS)
-			$(CC) -o $@ $(OBJS)
+all		:
+			@$(MK) $(LT_NAME)
+			@$(MK) $(WM_NAME)
 
-all		:	$(NAME)
+$(LT_NAME)	:	$(LT_OBJS)
+			$(CC) -o $@ $(LT_OBJS)
+
+$(WM_NAME)	:	$(WM_OBJS)
+			$(CC) -o $@ $(WM_OBJS)
 
 clean		:
 			$(RM) *~
@@ -45,7 +55,8 @@ clean		:
 			$(RM) *.core
 
 fclean		:	clean
-			$(RM) $(NAME)
+			$(RM) $(WM_NAME)
+			$(RM) $(LT_NAME)
 
 re		:	fclean all
 
