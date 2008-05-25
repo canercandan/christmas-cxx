@@ -11,16 +11,16 @@ using namespace std;
 
 int	main(void)
 {
-  Objet	**tab;
+  //Objet	**tab;
   Carton	c;
-  Objet	*n;
+  //Objet	*n;
   PetitPoney	p("coucou");
   PapierCadeau	pc;
-  Objet		*objet[] = {&p, &c, NULL};
+  //Objet		*objet[] = {&p, &c, NULL};
   TablePePeNoel *tppn;
   std::string**	tabstr;
   int		i = 0;
-  TapisRoulantPePeNoel	*tap;
+  //TapisRoulantPePeNoel	*tap;
 
   tppn = static_cast<TablePePeNoel*>(TablePePeNoel::creerTable());
   tabstr = tppn->Regarder();
