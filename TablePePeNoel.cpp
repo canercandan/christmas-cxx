@@ -5,7 +5,7 @@
 // Login   <candan_c@epitech.net>
 // 
 // Started on  Sun May 25 07:03:00 2008 caner candan
-// Last update Sun May 25 08:48:39 2008 julian kirtz
+// Last update Sun May 25 09:12:49 2008 julian kirtz
 //
 
 #include <iostream>
@@ -151,4 +151,11 @@ std::string**	TablePePeNoel::Regarder() const
     }
   tab[i] = NULL;
   return (tab);
+}
+
+bool		TablePePeNoel::isEmpty() const
+{
+  if (this->_nbObj)
+    return (false);
+  return (true);
 }

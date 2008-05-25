@@ -5,7 +5,7 @@
 ** Login   <candan_c@epitech.net>
 ** 
 ** Started on  Sat May 24 20:04:29 2008 caner candan
-** Last update Sun May 25 08:58:45 2008 caner candan
+** Last update Sun May 25 09:11:15 2008 julian kirtz
 */
 
 #ifndef __ITABLE_H__

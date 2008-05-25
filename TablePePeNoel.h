@@ -18,6 +18,7 @@ class	TablePePeNoel : public ITable
   virtual Objet*	Prendre(const std::string& name);
   virtual Objet*	Prendre(const int pos);
   virtual std::string**	Regarder() const;
+  virtual bool		isEmpty(void) const;
  private:
   Objet*	_tab[11];
   int		_nbObj;
