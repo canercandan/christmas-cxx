@@ -5,7 +5,7 @@
 // Login   <candan_c@epitech.net>
 // 
 // Started on  Sun May 25 09:44:12 2008 caner candan
-// Last update Sun May 25 14:35:29 2008 caner candan
+// Last update Sun May 25 15:23:19 2008 julian kirtz
 //
 
 #include <iostream>
@@ -112,7 +112,7 @@ void	TapisRoulantDef::setObjet()
 	  case 2:
 	    setObjet(new PapierCadeau);
 	    break;
-	  case 4:
+	  case 3:
 	    setObjet(new Carton);
 	    break;
 	  }
