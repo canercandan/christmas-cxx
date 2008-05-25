@@ -5,7 +5,7 @@
 // Login   <candan_c@epitech.net>
 // 
 // Started on  Sun May 25 08:34:54 2008 caner candan
-// Last update Sun May 25 14:52:37 2008 caner candan
+// Last update Sun May 25 15:21:29 2008 caner candan
 //
 
 #include <string>
@@ -53,7 +53,7 @@ Objet	*ElfDePePeNoel::_getObject(const string& name) const
   max = this->_table->getNbObj();
   for (i = 0; i < max; i++)
     {
-      if (&name == tab[i])
+      if (name == *tab[i])
 	return (this->_table->Prendre(*tab[i]));
       else if (name == "Jouet" && *tab[i] != "Carton" &&
 	       *tab[i] != "PapierCadeau")
@@ -73,13 +73,13 @@ Objet	*ElfDePePeNoel::emballerCadeau(void)
       Jouet = _getObject("Jouet");
       Carton = _getObject("Carton");
       PapierCadeau = _getObject("PapierCadeau");
-      while (!Jouet && !Carton && !PapierCadeau)
+      while (!Jouet || !Carton || !PapierCadeau)
 	{
 	  if (this->_tapis->isEmpty())
 	    this->_tapis->setObjet();
-	  if (this->_tapis->getObjet()->getName() == "Carton" && !Carton)
+	  if (!Carton && this->_tapis->getObjet()->getName() == "Carton")
 	    Carton = this->_tapis->getObjet();
-	  else if (this->_tapis->getObjet()->getName() == "PapierCadeau" && !PapierCadeau)
+	  else if (!PapierCadeau && this->_tapis->getObjet()->getName() == "PapierCadeau")
 	    PapierCadeau = this->_tapis->getObjet();
 	  else if (!Jouet)
 	    Jouet = this->_tapis->getObjet();
@@ -96,6 +96,6 @@ Objet	*ElfDePePeNoel::emballerCadeau(void)
       exit(0);
     }
 
-  Objet	*objet[] = {Jouet, Carton, PapierCadeau};
+  Objet	*objet[] = {Jouet, Carton, PapierCadeau, NULL};
   return (Objet::MesTestUnitaires(objet));
 }

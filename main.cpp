@@ -65,8 +65,14 @@ int	main(void)
   std::string	**tabstr;
   tabstr = taleat.Regarder();
   for (i = 0; tabstr[i] != NULL; i++)
-    cout << *(tabstr[i++]) << endl;
-//   ElfDePePeNoel	elf(&taleat, &tapalat);
+    cout << *(tabstr[i]) << endl;
+  cout << "nb : " << taleat.getNbObj() << endl;
+  ElfDePePeNoel	elf(&taleat, &tapalat);
+  Objet		*objet;
 
-//   elf.emballerCadeau();
+  while (42)
+    {
+      objet = elf.emballerCadeau();
+      cout << tapalat.cadeauXML(objet) << endl;
+    }
 }

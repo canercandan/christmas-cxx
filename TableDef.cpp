@@ -5,7 +5,7 @@
 // Login   <candan_c@epitech.net>
 // 
 // Started on  Sun May 25 10:35:06 2008 caner candan
-// Last update Sun May 25 13:24:09 2008 caner candan
+// Last update Sun May 25 14:58:39 2008 caner candan
 //
 
 #include <iostream>
@@ -68,7 +68,7 @@ void	TableDef::Poser(Objet *o)
     }
   catch (bool)
     {
-      cout << "TablePePeNoel::Poser impossible: too much 'Objet'" << endl;
+      cout << "Table::Poser impossible: too much 'Objet'" << endl;
     }
 }
 
@@ -101,7 +101,7 @@ Objet*		TableDef::Prendre(const string& name)
     }
   catch (bool)
     {
-      cout << "TablePePeNoel::Prendre impossible: 'Objet' "
+      cout << "Table::Prendre impossible: 'Objet' "
 	   << "named name not found" << endl;
       return (NULL);
     }
@@ -136,7 +136,7 @@ Objet*		TableDef::Prendre(const int pos)
     }
   catch (bool)
     {
-      cout << "TablePePeNoel::Prendre impossible: 'Objet' named "
+      cout << "Table::Prendre impossible: 'Objet' named "
 	   << "name not found" << endl;
       return (NULL);
     }
