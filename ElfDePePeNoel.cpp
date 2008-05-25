@@ -5,7 +5,7 @@
 // Login   <candan_c@epitech.net>
 // 
 // Started on  Sun May 25 08:34:54 2008 caner candan
-// Last update Sun May 25 13:40:55 2008 caner candan
+// Last update Sun May 25 14:26:44 2008 caner candan
 //
 
 #include <string>
@@ -65,38 +65,44 @@ Objet	*ElfDePePeNoel::_getObject(const string& name) const
 // }
 //   catch (bool)
 //     {
-//       cout << "pepe ya un schmolle dans la bignou" << endl;
 //       exit(0);
 //     }
 
 
 void	ElfDePePeNoel::emballerCadeau(void)
 {
-  Objet	*PC = _getObject("PapierCadeau");
-
-  if (!PC)
-    {
-
-    }
-
-  Objet	*objet[] = {_getObject("Jouet"),
-		    _getObject("Carton"),
-		    PC};
+  Objet	*Jouet;
+  Objet	*Carton;
+  Objet	*PapierCadeau;
 
   try
     {
-      if (this->_table->isEmpty())
-	throw 1;
-      if (this->_tapis->isEmpty())
-	throw 2;
-      Objet::MesTestUnitaires(objet);
+      Jouet = _getObject("Jouet");
+      Carton = _getObject("Carton");
+      PapierCadeau = _getObject("PapierCadeau");
+      while (!Jouet && !Carton && !PapierCadeau)
+	{
+	  if (this->_tapis->isEmpty())
+	    this->_tapis->setObjet();
+	  if (this->_tapis->getObjet()->getName() == "Carton" && !Carton)
+	    Carton = this->_tapis->getObjet();
+	  else if (this->_tapis->getObjet()->getName() == "PapierCadeau" && !PapierCadeau)
+	    PapierCadeau = this->_tapis->getObjet();
+	  else if (!Jouet)
+	    Jouet = this->_tapis->getObjet();
+	  if (this->_table->getNbObj() < 10)
+	    this->_table->Poser(this->_tapis->getObjet());
+	  else
+	    throw true;
+	  this->_tapis->setObjet(NULL);
+	}
     }
-  catch (int e)
+  catch (bool)
     {
-      if (e == 1)
-	cout << "emballerCadeau impossible: TablePePeNoel is empty" << endl;
-      else if (e == 2)
-	cout << "emballerCadeau impossible: TapisRoulantPePeNoel "
-	     << "is empty" << endl;
+      cout << "pepe ya un schmolle dans la bignou" << endl;
+      exit(0);
     }
+
+  Objet	*objet[] = {Jouet, Carton, PapierCadeau};
+  Objet::MesTestUnitaires(objet);
 }
