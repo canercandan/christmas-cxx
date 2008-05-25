@@ -5,7 +5,7 @@
 ** Login   <candan_c@epitech.net>
 ** 
 ** Started on  Sun May 25 09:45:21 2008 caner candan
-** Last update Sun May 25 13:45:58 2008 caner candan
+** Last update Sun May 25 13:56:55 2008 julian kirtz
 */
 
 #ifndef __TAPISROULANTDEF__
@@ -31,6 +31,7 @@ class	TapisRoulantDef : public ITapisRoulant
 
   virtual Objet	*Regarder() const;
   virtual void	setObjet(Objet *o);
+  virtual void	setObjet();
   virtual Objet	*getObjet(void);
   virtual bool	isEmpty(void) const;
  protected:

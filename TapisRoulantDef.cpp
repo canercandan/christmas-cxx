@@ -5,10 +5,12 @@
 // Login   <candan_c@epitech.net>
 // 
 // Started on  Sun May 25 09:44:12 2008 caner candan
-// Last update Sun May 25 13:49:50 2008 caner candan
+// Last update Sun May 25 14:02:39 2008 julian kirtz
 //
 
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 #include "TapisRoulantDef.h"
 #include "ITapisRoulant.h"
 
@@ -84,6 +86,36 @@ Emballage	*TapisRoulantDef::Regarder() const
 void	TapisRoulantDef::setObjet(Object *o)
 {
   this->_objet = o;
+}
+
+void	TapisRoulantDef::setObjet()
+{
+  try
+    {
+      if (this->_objet != NULL)
+	throw true;
+        int	aleat;
+	srandom(time(NULL));
+	switch (aleat = random() % 4)
+	  {
+	  case 0:
+	    setObjet(new Nounours("Bisousnours"));
+	    break;
+	  case 1:
+	    setObjet(new PetitPoney("PetitPoney"));
+	    break;
+	  case 2:
+	    setObjet(new PapierCadeau);
+	    break;
+	  case 4:
+	    setObjet(new Carton);
+	    break;
+	  }
+    }
+  catch (bool)
+    {
+      cout << "TapisRoulantDef::setObjet: impossible tapis full" << endl;
+    }
 }
 
 Objet	*TapisRoulantDef::getObjet(void)
