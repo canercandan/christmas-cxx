@@ -5,7 +5,7 @@
 // Login   <candan_c@epitech.net>
 // 
 // Started on  Sun May 25 10:27:05 2008 caner candan
-// Last update Sun May 25 13:19:26 2008 caner candan
+// Last update Sun May 25 15:02:22 2008 julian kirtz
 //
 
 #include <sstream>
@@ -23,7 +23,6 @@ TableAleat::TableAleat()
   std::ostringstream	nameJouet;
   int			i;
 
-  _nbObj = 9;
   srandom(time(NULL));
   for (i = 0; i < _nbObj; i++)
     switch ((random() % 4))
