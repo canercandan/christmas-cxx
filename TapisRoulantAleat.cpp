@@ -5,16 +5,20 @@
 // Login   <candan_c@epitech.net>
 // 
 // Started on  Sun May 25 09:54:27 2008 caner candan
-// Last update Sun May 25 13:54:54 2008 julian kirtz
+// Last update Sun May 25 14:46:17 2008 julian kirtz
 //
 
 #include <cstdlib>
 #include <ctime>
+#include <sstream>
 #include "TapisRoulantAleat.h"
 #include "Nounours.h"
 #include "PetitPoney.h"
 #include "PapierCadeau.h"
 #include "Carton.h"
+#include "Objet.h"
+
+using namespace std;
 
 TapisRoulantAleat::TapisRoulantAleat()
 {
@@ -49,4 +53,16 @@ TapisRoulantAleat&	TapisRoulantAleat::operator=(const TapisRoulantAleat& t)
   if (this != &t)
     this->_objet = t._objet;
   return (*this);
+}
+
+std::string	TapisRoulantAleat::cadeauXML(Objet *o)
+{
+  ostringstream	flux;
+
+  flux << '<' << o->getName() << '>' << endl
+       << '<' << o->getObjet()->getName() << '>' << endl
+       << "<Jouet name=\"" << o->getObjet()->getObjet()->getName() << "\"/>" << endl
+       << "</" << o->getObjet()->getName() << ">" << endl
+       << "</" << o->getName() << ">" << endl;
+  return (flux.str());
 }
