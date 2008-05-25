@@ -5,7 +5,7 @@
 // Login   <candan_c@epitech.net>
 // 
 // Started on  Sun May 25 10:27:05 2008 caner candan
-// Last update Sun May 25 15:04:04 2008 julian kirtz
+// Last update Sun May 25 15:07:39 2008 julian kirtz
 //
 
 #include <sstream>
@@ -20,7 +20,6 @@
 
 TableAleat::TableAleat()
 {
-  std::ostringstream	nameJouet;
   int			i;
 
   srandom(time(NULL));
@@ -34,14 +33,10 @@ TableAleat::TableAleat()
 	Poser(new Carton);
 	break;
       case 2:
-	nameJouet.clear();
-	nameJouet << "Bisousnours" << i;
-	Poser(new Nounours(nameJouet.str()));
+	Poser(new Nounours("Bisousnours"));
 	break;
       case 3:
-	nameJouet.clear();
-	nameJouet << "PetitPoney" << i;
-	Poser(new PetitPoney(nameJouet.str()));
+	Poser(new PetitPoney("PetitPoney"));
 	break;
       }
   _tab[i] = NULL;
