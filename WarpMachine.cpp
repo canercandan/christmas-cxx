@@ -8,6 +8,7 @@
 // Last update Sun May 25 15:43:00 2008 julian kirtz
 //
 
+#include <cstdlib>
 #include <iostream>
 #include "Chaussette.h"
 

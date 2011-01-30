@@ -28,7 +28,8 @@ LT_SRCS		=	main.cpp			\
 			TapisRoulantPePeNoel.cpp	\
 			Chaussette.cpp
 
-WM_SRCS		=	WarpMachine.cpp
+WM_SRCS		=	WarpMachine.cpp			\
+			Chaussette.cpp
 
 LT_OBJS		=	$(LT_SRCS:.cpp=.o)
 WM_OBJS		=	$(WM_SRCS:.cpp=.o)

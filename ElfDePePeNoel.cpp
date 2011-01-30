@@ -8,6 +8,7 @@
 // Last update Sun May 25 15:21:29 2008 caner candan
 //
 
+#include <cstdlib>
 #include <string>
 #include "ElfDePePeNoel.h"
 #include "IElf.h"
